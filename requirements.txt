@@ -1,0 +1,10 @@
+Django==5.0.1
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.1
+# psycopg2-binary 2.x does not support Python 3.14; use psycopg3 binary wheels.
+# Pin to a version available on PyPI for Python 3.14.
+psycopg[binary]==3.3.2
+django-cors-headers==4.3.1
+python-dotenv==1.0.0
+WeasyPrint==61.2
+
