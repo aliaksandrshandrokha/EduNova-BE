@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: edunova-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: gunicorn edunova_backend.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --threads 2 --timeout 120 --access-logfile - --error-logfile -
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: POETRY_VENV_IN_PROJECT
+        value: "false"
+      - key: PIP_REQUIRE_VIRTUALENV
+        value: "false"
+
