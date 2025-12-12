@@ -11,4 +11,5 @@ pydyf==0.8.0
 openai>=2.9.0
 gunicorn==21.2.0
 whitenoise==6.6.0
+drf-spectacular==0.27.2
 
